@@ -12,10 +12,6 @@ spec:
       port: 8200
       targetPort: 8200
       protocol: "TCP"
-    - name: http
-      port: 8200
-    - name: server
-      port: 8201
   selector:
     app: vault
 EOF
