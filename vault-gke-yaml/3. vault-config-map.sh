@@ -24,4 +24,4 @@ EOF
 
 kubectl create configmap vault --from-file=vault.hcl -n vault-deploy
 
-kubectl delete configmap vault
+#kubectl delete configmap vault
