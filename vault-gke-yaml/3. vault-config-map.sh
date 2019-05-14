@@ -29,6 +29,8 @@ EOF
 
 #kubectl create ns vault-deploy
 
-kubectl create configmap vault --from-literal api-addr=https://${VAULT_LOAD_BALANCER_IP}:8200 --from-file=vault.hcl -n vault-deploy
-
+# If previously created, Delete the ConfigMap before proceeding
 #kubectl delete configmap vault
+
+
+kubectl create configmap vault --from-literal api-addr=https://${VAULT_LOAD_BALANCER_IP}:8200 --from-file=vault.hcl -n vault-deploy
